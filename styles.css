@@ -72,6 +72,34 @@ body::before {
     padding: 0 2rem;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.hamburger.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.hamburger.active .line2 {
+    opacity: 0;
+}
+
+.hamburger.active .line3 {
+    transform: rotate(45deg) translate(-7px, -6px);
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -81,6 +109,7 @@ body::before {
     border-radius: 50%;
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
     animation: pulse 2s infinite;
+    flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -131,12 +160,12 @@ body::before {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 2rem;
+    padding: 6rem 2rem 2rem 2rem;
     animation: fadeIn 1s ease-out;
     position: relative;
     /* co; */
@@ -196,6 +225,12 @@ body::before {
 .hero-content {
     max-width: 600px;
     animation: float 3s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 @keyframes float {
@@ -216,6 +251,10 @@ body::before {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     object-fit: cover;
     object-position: center;
+    flex-shrink: 0;
+    display: block;
+    position: relative;
+    z-index: 10;
 }
 
 @keyframes rotate {
@@ -229,10 +268,12 @@ body::before {
 
 .hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
     color: #d4af37;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
 }
 
 @keyframes gradientShift {
@@ -249,19 +290,20 @@ body::before {
 
 .hero p {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #f0f0f0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hero-description {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #e0e0e0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .hero-stats {
@@ -631,92 +673,337 @@ body::before {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .nav-links {
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 27, 14, 0.95);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        max-height: 400px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .hero {
+        padding: 6rem 1rem 1rem 1rem;
+        height: auto;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 2rem 0;
     }
 
     .hero h1 {
         font-size: 2.5rem;
     }
 
-    .glass-section {
-        margin: 2rem 1rem;
-        padding: 2rem 1rem;
+    .hero p {
+        font-size: 1.1rem;
     }
 
-    .glass-section h2 {
-        font-size: 2.2rem;
-    }
-
-    .skills-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .hero-description {
+        font-size: 1rem;
     }
 
     .profile-img {
         width: 150px;
         height: 150px;
+    }    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .glass-section {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .glass-section h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0;
     }
 
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .about-text {
+        gap: 1rem;
     }
 
     .about-text p {
-        text-align: center;
+        font-size: 1rem;
+        text-align: left;
     }
 
     .about-timeline {
         gap: 1.5rem;
+        padding-left: 30px;
+    }
+
+    .about-timeline::before {
+        left: 15px;
     }
 
     .timeline-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        max-width: 100%;
     }
 
     .timeline-dot {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
     }
 
     .timeline-content {
         padding: 1rem;
+        min-height: auto;
+        text-align: left;
     }
 
     .timeline-content h4 {
         font-size: 1.2rem;
     }
 
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+
     .quote {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-item {
+        padding: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-content {
+    .glass-header {
+        padding: 0.5rem 0;
+    }
+
+    .navbar {
         padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero {
+        padding: 5rem 1rem 1rem 1rem;
+        margin-top: 0;
+        height: auto;
+    }
+
+    .hero-content {
+        padding: 1rem 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
     }
 
     .profile-img {
         width: 120px;
         height: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .social-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 1rem;
     }
 
     .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .glass-section {
+        margin: 1.5rem 0.5rem;
+        padding: 1rem 0.8rem;
+    }
+
+    .glass-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .skill-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-form {
+        gap: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 16px;
+    }
+
+    .contact-form textarea {
+        min-height: 100px;
+    }
+
+    .contact-info {
+        font-size: 0.9rem;
+    }
+
+    .glass-footer {
+        padding: 1rem 0.5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1.3rem;
+        padding: 0.3rem 0.6rem;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
     }
 }
