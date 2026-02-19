@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menaga Krishnamurthy | Portfolio</title>
+  <meta name="description" content="Premium animated portfolio of Menaga Krishnamurthy - Frontend Developer and Software Engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="bg-aurora" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-pulse" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home">MK</a>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-shapes" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="hero-card reveal">
+        <p class="eyebrow">Hello, I am</p>
+        <h1 class="name-glow">Menaga Krishnamurthy</h1>
+        <h2 class="role"><span id="typingText"></span><span class="caret">|</span></h2>
+        <p class="hero-text">I’m pursuing TyBSc-IT at SIA Dombivali. I build responsive, secure, and user-friendly web applications with clean UI, smooth UX, and strong problem-solving skills.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gradient" href="#contact">Hire Me</a>
+          <a class="btn btn-outline" href="assets/Menaga-Resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-photo-card reveal">
+        <img src="assets/Menaga.jpeg" alt="Menaga Krishnamurthy" />
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <h3 class="section-title">About Me</h3>
+      <p class="section-text">I’m a passionate BSc IT fresher with a strong foundation in programming, web development, and system design. I enjoy building clean, responsive applications and continuously learning modern technologies.</p>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <h4><span class="counter" data-target="3">0</span>+</h4>
+          <p>Projects Completed</p>
+        </article>
+        <article class="stat-card">
+          <h4><span class="counter" data-target="2">0</span>+</h4>
+          <p>Years Learning</p>
+        </article>
+        <article class="stat-card">
+          <h4><span class="counter" data-target="10">0</span>+</h4>
+          <p>Technologies</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="focus">
+      <h3 class="section-title">Focus Areas</h3>
+      <div class="focus-grid">
+        <article class="focus-card">Responsive UI</article>
+        <article class="focus-card">Clean Code</article>
+        <article class="focus-card">Problem Solving</article>
+        <article class="focus-card">Database Basics</article>
+        <article class="focus-card">Team Collaboration</article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <h3 class="section-title">Skills</h3>
+      <div class="skills-layout">
+        <div class="skill-bars">
+          <div class="skill-item"><label>Java</label><div class="bar"><span style="--w: 86%"></span></div></div>
+          <div class="skill-item"><label>Python</label><div class="bar"><span style="--w: 85%"></span></div></div>
+          <div class="skill-item"><label>C++</label><div class="bar"><span style="--w: 80%"></span></div></div>
+          <div class="skill-item"><label>HTML</label><div class="bar"><span style="--w: 92%"></span></div></div>
+          <div class="skill-item"><label>CSS</label><div class="bar"><span style="--w: 90%"></span></div></div>
+          <div class="skill-item"><label>JavaScript</label><div class="bar"><span style="--w: 88%"></span></div></div>
+          <div class="skill-item"><label>Bootstrap</label><div class="bar"><span style="--w: 84%"></span></div></div>
+          <div class="skill-item"><label>SQL</label><div class="bar"><span style="--w: 82%"></span></div></div>
+          <div class="skill-item"><label>DSA</label><div class="bar"><span style="--w: 78%"></span></div></div>
+          <div class="skill-item"><label>OS</label><div class="bar"><span style="--w: 75%"></span></div></div>
+          <div class="skill-item"><label>Computer Networks</label><div class="bar"><span style="--w: 74%"></span></div></div>
+        </div>
+        <div class="circles">
+          <div class="circle" style="--p: 90"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"></circle><circle cx="60" cy="60" r="52"></circle></svg><span>Frontend</span></div>
+          <div class="circle" style="--p: 80"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"></circle><circle cx="60" cy="60" r="52"></circle></svg><span>Backend Basics</span></div>
+          <div class="circle" style="--p: 84"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"></circle><circle cx="60" cy="60" r="52"></circle></svg><span>Problem Solving</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <h3 class="section-title">Projects</h3>
+      <article class="project-card" id="tiltCard">
+        <h4>Realtime Chat Application</h4>
+        <p>A real-time messaging app showcasing responsive UI patterns, smooth interaction flow, and practical frontend engineering.</p>
+        <a class="btn btn-gradient" href="https://github.com/Menagasweety/realtime-chat.git" target="_blank" rel="noopener">View Project</a>
+      </article>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <a href="mailto:menaganadar28@gmail.com">menaganadar28@gmail.com</a>
+          <a href="https://www.linkedin.com/in/menaga-krishnamurthy" target="_blank" rel="noopener">LinkedIn Profile</a>
+          <a href="https://github.com/Menagasweety" target="_blank" rel="noopener">GitHub Profile</a>
+          <a href="tel:8850341793">8850341793</a>
+        </div>
+        <form class="contact-form" id="contactForm" action="mailto:menaganadar28@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn btn-gradient">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="divider"></div>
+    <p>© 2026 Menaga Krishnamurthy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
