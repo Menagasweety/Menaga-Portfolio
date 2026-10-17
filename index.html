@@ -1,157 +1,67 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menaga Krishnamurthy | Portfolio</title>
-  <meta name="description" content="Premium animated portfolio of Menaga Krishnamurthy - Frontend Developer and Software Engineer." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e18">
+  <meta name="description" content="Menaga Krishnamurthy — data analyst and data science portfolio. Explore projects in analytics, machine learning, and Python.">
+  <title>Menaga Krishnamurthy — Data &amp; AI Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="page-loader" id="pageLoader">
-    <div class="loader-ring"></div>
-  </div>
-
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-  <canvas id="particleCanvas" aria-hidden="true"></canvas>
-  <div class="bg-aurora" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-pulse" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <a class="brand" href="#home">Menaga</a>
-    <nav class="nav" id="nav">
-      <a href="#about">About</a>
-      <a href="#focus">Focus</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+<body class="dark">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Menaga, home"><span class="brand-mark">M<span>.</span></span><span class="brand-copy"><b>MENAGA KRISHNAMURTHY</b><small>DATA &amp; AI PORTFOLIO</small></span></a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#toolkit">Toolkit</a><a href="#contact">Contact</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions"><span class="header-status"><i></i> OPEN TO WORK</span><a class="header-github" href="https://github.com/Menagasweety" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a class="header-resume" href="resume.pdf" download="Menaga_Krishnamurthy_Resume.pdf">Resume <span>↓</span></a><a class="header-cta" href="mailto:menaganadar28@gmail.com">Let’s talk <span>↗</span></a><button id="themeBtn" class="icon-btn" aria-label="Switch color theme" title="Switch color theme">◐</button><button id="menuBtn" class="icon-btn menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button></div>
   </header>
+  <main id="main">
+    <section class="hero page-wrap" id="home">
+      <div class="hero-copy"><div class="availability"><i></i> DATA ANALYTICS · MACHINE LEARNING</div>
+        <h1>Turning data<br>into <span class="serif">direction.</span></h1>
+        <p class="hero-lead">Hi, I’m Menaga. I explore data, build practical machine learning projects, and make technical work easier to understand.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span>↓</span></a><a class="text-link" href="resume.pdf" download="Menaga_Krishnamurthy_Resume.pdf">Download resume <span>↓</span></a><a class="text-link" href="mailto:menaganadar28@gmail.com">Let’s connect <span>↗</span></a></div>
+        <div class="hero-meta"><span>BASED IN INDIA</span><span class="meta-line"></span><span>OPEN TO DATA OPPORTUNITIES</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract data visualization">
+        <div class="visual-top"><span>FIELD NOTES / 01</span><span class="live-dot">● EXPLORING</span></div>
+        <div class="visual-title"><span>Signals, patterns<br>&amp; better questions.</span><span class="visual-index">01—04</span></div>
+        <div class="visual-chart"><div class="chart-y"><span>HIGH</span><span>MID</span><span>LOW</span></div><div class="chart-grid"><svg viewBox="0 0 540 230" role="img" aria-label="Decorative line chart illustration"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#db6c4d" stop-opacity=".24"/><stop offset="1" stop-color="#db6c4d" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 177 C35 169 48 144 82 151S136 176 172 132 229 124 265 107 314 124 350 91 410 86 444 58 503 82 540 35V230H0Z"/><path class="line" d="M0 177 C35 169 48 144 82 151S136 176 172 132 229 124 265 107 314 124 350 91 410 86 444 58 503 82 540 35"/><circle cx="444" cy="58" r="5"/><circle class="last-dot" cx="540" cy="35" r="6"/></svg><div class="chart-x"><span>ASK</span><span>EXPLORE</span><span>TEST</span><span>EXPLAIN</span></div></div></div>
+        <div class="visual-bottom"><span>QUESTION → EVIDENCE → INSIGHT</span><span>ALWAYS IN PROGRESS</span></div>
+        <div class="floating-note"><span class="note-star">✳</span><span>Make the insight<br>easy to act on.</span></div>
+      </div>
+      <div class="hero-number">01 <span>— PORTFOLIO</span></div>
+    </section>
+    <section class="ticker" aria-label="Areas of interest"><div>PYTHON <b>✳</b> DATA ANALYSIS <b>✳</b> MACHINE LEARNING <b>✳</b> STORYTELLING <b>✳</b> PYTHON <b>✳</b> DATA ANALYSIS <b>✳</b> MACHINE LEARNING <b>✳</b> STORYTELLING <b>✳</b></div></section>
+    <section class="proof-strip page-wrap" aria-label="GitHub portfolio snapshot"><div><strong id="repoStat">—</strong><span>PUBLIC PROJECTS</span></div><div><strong id="languageStat">—</strong><span>LANGUAGES USED</span></div><div><strong id="siteStat">—</strong><span>LIVE PROJECT SITES</span></div><a href="https://github.com/Menagasweety" target="_blank" rel="noreferrer">LIVE FROM GITHUB <span>↗</span></a></section>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-shapes" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="hero-card reveal">
-        <p class="eyebrow">Hello, I am</p>
-        <h1 class="name-glow">Menaga Krishnamurthy</h1>
-        <h2 class="role"><span id="typingText"></span><span class="caret">|</span></h2>
-        <p class="hero-text">I’m pursuing TyBSc-IT at SIA Dombivali. I build responsive, secure, and user-friendly web applications with clean UI, smooth UX, and strong problem-solving skills.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gradient" href="#contact">Hire Me</a>
-          <a class="btn btn-outline" href="assets/Menaga-Resume.pdf" download>Download Resume</a>
-        </div>
-      </div>
-      <div class="hero-photo-card reveal">
-        <img src="assets/Menaga.jpeg" alt="Menaga Krishnamurthy" />
-      </div>
+    <section class="section page-wrap work-section" id="work">
+      <div class="section-head"><div><div class="section-label">01 / SELECTED WORK</div><h2>Projects, <span class="serif">in practice.</span></h2></div><a class="text-link all-projects" href="https://github.com/Menagasweety?tab=repositories" target="_blank" rel="noreferrer">All repositories <span>↗</span></a></div>
+      <p class="section-intro">A look at the questions I’m exploring and the tools I’m using. Project details load from my public GitHub repositories.</p>
+      <div class="project-controls"><div id="filters" class="filters" aria-label="Filter projects"><button class="filter active" data-filter="all">All work <span id="projectCount">—</span></button><button class="filter" data-filter="python">Python</button><button class="filter" data-filter="data">Data &amp; BI</button><button class="filter" data-filter="ml">Machine learning</button></div><label class="search-box"><span>⌕</span><input id="projectSearch" type="search" placeholder="Find a project" aria-label="Search projects"></label></div>
+      <div class="project-shelf"><div class="shelf-heading"><div><span class="shelf-icon">{ }</span><div><h3>Python &amp; notebook projects</h3><small>Analysis, experiments &amp; model work</small></div></div><div class="shelf-controls"><span id="notebookCount">0 PROJECTS</span><button class="shelf-arrow" data-scroll="notebookRow" aria-label="Scroll Python projects left">←</button><button class="shelf-arrow" data-scroll="notebookRow" data-direction="right" aria-label="Scroll Python projects right">→</button></div></div><div id="notebookRow" class="project-row" aria-live="polite"><div class="loading-card"><span class="loader"></span><p>Finding notebook projects…</p></div></div></div>
+      <div class="project-shelf web-shelf"><div class="shelf-heading"><div><span class="shelf-icon web-icon">↗</span><div><h3>Websites &amp; interactive apps</h3><small>Live demos with source code in the same card</small></div></div><div class="shelf-controls"><span id="webCount">0 PROJECTS</span><button class="shelf-arrow" data-scroll="webRow" aria-label="Scroll web projects left">←</button><button class="shelf-arrow" data-scroll="webRow" data-direction="right" aria-label="Scroll web projects right">→</button></div></div><div id="webRow" class="project-row" aria-live="polite"><div class="loading-card"><span class="loader"></span><p>Finding live projects…</p></div></div></div>
+      <div class="github-strip"><span class="github-symbol">⌘</span><div><b>More experiments, notebooks &amp; code</b><small>Browse the complete collection on GitHub.</small></div><a href="https://github.com/Menagasweety?tab=repositories" target="_blank" rel="noreferrer" aria-label="Browse all GitHub repositories">↗</a></div>
     </section>
 
-    <section class="section reveal" id="about">
-      <h3 class="section-title">About Me</h3>
-      <p class="section-text">I’m a passionate BSc IT fresher with a strong foundation in programming, web development, and system design. I enjoy building clean, responsive applications and continuously learning modern technologies.</p>
-      <div class="stats-grid">
-        <article class="stat-card">
-          <h4><span class="counter" data-target="2">2</span>+</h4>
-          <p>Projects Completed</p>
-        </article>
-        <article class="stat-card">
-          <h4><span class="counter" data-target="2">0</span>+</h4>
-          <p>Years Learning</p>
-        </article>
-        <article class="stat-card">
-          <h4><span class="counter" data-target="10">0</span>+</h4>
-          <p>Technologies</p>
-        </article>
-      </div>
-    </section>
+    <section class="about-band" id="about"><div class="page-wrap about-layout"><aside class="about-side"><div class="section-label">02 / ABOUT</div><div class="about-profile"><div class="about-profile-top"><span>PROFILE / 2026</span><span>INDIA</span></div><div class="about-monogram" aria-hidden="true">MK<span>01</span></div><div class="about-profile-caption"><strong>Menaga Krishnamurthy</strong><span>DATA ANALYTICS <i>·</i> MACHINE LEARNING</span></div><div class="about-profile-bottom"><span>B.Sc. Information Technology</span><span class="profile-status"><i></i> OPEN TO OPPORTUNITIES</span></div></div></aside><div class="about-content"><div class="about-kicker">A PRACTICAL, CURIOUS APPROACH TO DATA</div><h2>Good analysis starts<br>with a <span class="serif">better question.</span></h2><p>I’m a B.Sc. Information Technology graduate building experience across data analytics and machine learning. I enjoy the full process: clarifying a question, understanding the data, exploring an approach, and explaining what the findings can—and can’t—tell us.</p><p>This portfolio brings that work together. Each project links to its public repository, where you can review the code, documentation, and progress firsthand.</p><div class="about-facts"><div><span>01</span><b>Frame the question</b><small>Clarify the problem before choosing an approach.</small></div><div><span>02</span><b>Examine the evidence</b><small>Explore the data and check the result.</small></div><div><span>03</span><b>Explain the finding</b><small>Make the takeaway clear and useful.</small></div></div></div></div></section>
 
-    <section class="section reveal" id="focus">
-      <h3 class="section-title">Focus Areas</h3>
-      <div class="focus-grid">
-        <article class="focus-card">Responsive UI</article>
-        <article class="focus-card">Clean Code</article>
-        <article class="focus-card">Problem Solving</article>
-        <article class="focus-card">Database Basics</article>
-        <article class="focus-card">Team Collaboration</article>
-      </div>
-    </section>
+    <section class="section page-wrap toolkit-section" id="toolkit"><div class="section-head"><div><div class="section-label">03 / TOOLKIT</div><h2>Tools for the <span class="serif">curious.</span></h2></div><span class="head-aside">LEARNING BY BUILDING</span></div><p class="section-intro">The technologies I’m using across my projects. Explore each repository for the specific methods and tools it demonstrates.</p><div class="toolkit-grid">
+      <article class="tool-card"><div class="tool-icon python-icon">Py</div><div><h3>Python &amp; analysis</h3><p>Exploring and preparing data with practical notebooks and scripts.</p><div class="tool-tags"><span>Pandas</span><span>NumPy</span><span>Visualization</span></div></div><span class="tool-num">01</span></article>
+      <article class="tool-card"><div class="tool-icon sql-icon">⌘</div><div><h3>SQL &amp; databases</h3><p>Building query skills to retrieve, shape, and understand structured data.</p><div class="tool-tags"><span>Querying</span><span>Analysis</span></div></div><span class="tool-num">02</span></article>
+      <article class="tool-card"><div class="tool-icon ml-icon">✳</div><div><h3>Machine learning</h3><p>Learning model workflows, evaluation, and responsible interpretation.</p><div class="tool-tags"><span>Scikit-learn</span><span>Model evaluation</span></div></div><span class="tool-num">03</span></article>
+      <article class="tool-card"><div class="tool-icon viz-icon">▥</div><div><h3>Communication &amp; BI</h3><p>Turning analysis into clear charts, summaries, and useful next steps.</p><div class="tool-tags"><span>Visualization</span><span>Storytelling</span></div></div><span class="tool-num">04</span></article>
+    </div><div class="toolkit-note"><span>✳</span> My project repositories are the best place to see the tools in context.</div></section>
 
-    <section class="section reveal" id="skills">
-      <h3 class="section-title">Skills</h3>
-      <div class="skills-layout">
-        <div class="skill-bars">
-          <div class="skill-item"><label>Java</label><div class="bar"><span style="--w: 86%"></span></div></div>
-          <div class="skill-item"><label>Python</label><div class="bar"><span style="--w: 85%"></span></div></div>
-          <div class="skill-item"><label>C++</label><div class="bar"><span style="--w: 80%"></span></div></div>
-          <div class="skill-item"><label>HTML</label><div class="bar"><span style="--w: 92%"></span></div></div>
-          <div class="skill-item"><label>CSS</label><div class="bar"><span style="--w: 90%"></span></div></div>
-          <div class="skill-item"><label>JavaScript</label><div class="bar"><span style="--w: 88%"></span></div></div>
-          <div class="skill-item"><label>Bootstrap</label><div class="bar"><span style="--w: 84%"></span></div></div>
-          <div class="skill-item"><label>SQL</label><div class="bar"><span style="--w: 82%"></span></div></div>
-          <div class="skill-item"><label>DSA</label><div class="bar"><span style="--w: 78%"></span></div></div>
-          <div class="skill-item"><label>OS</label><div class="bar"><span style="--w: 75%"></span></div></div>
-          <div class="skill-item"><label>Computer Networks</label><div class="bar"><span style="--w: 74%"></span></div></div>
-        </div>
-        <div class="circles">
-          <div class="circle" style="--p: 90"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"></circle><circle cx="60" cy="60" r="52"></circle></svg><span>Frontend</span></div>
-          <div class="circle" style="--p: 80"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"></circle><circle cx="60" cy="60" r="52"></circle></svg><span>Backend Basics</span></div>
-          <div class="circle" style="--p: 84"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"></circle><circle cx="60" cy="60" r="52"></circle></svg><span>Problem Solving</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="projects">
-      <h3 class="section-title">Projects</h3>
-      <article class="project-card" id="tiltCard">
-        <h4>Realtime Chat Application</h4>
-        <p>A real-time messaging app showcasing responsive UI patterns, smooth interaction flow, and practical frontend engineering.</p>
-        <a class="btn btn-gradient" href="https://github.com/Menagasweety/realtime-chat.git" target="_blank" rel="noopener">View Project</a>
-      </article>
-    </section>
-
-    <section class="section reveal" id="contact">
-      <h3 class="section-title">Contact</h3>
-      <div class="contact-layout">
-        <div class="contact-info">
-          <a href="mailto:menaganadar28@gmail.com">menaganadar28@gmail.com</a>
-          <a href="https://www.linkedin.com/in/menaga-krishnamurthy" target="_blank" rel="noopener">LinkedIn Profile</a>
-          <a href="https://github.com/Menagasweety" target="_blank" rel="noopener">GitHub Profile</a>
-          <a href="tel:8850341793">8850341793</a>
-        </div>
-        <form class="contact-form" id="contactForm" action="mailto:menaganadar28@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn btn-gradient">Send Message</button>
-          <p class="form-note" id="formNote"></p>
-        </form>
-      </div>
-    </section>
+    <section class="contact-section" id="contact"><div class="page-wrap contact-inner"><div class="section-label">04 / YOUR NEXT ANALYST?</div><h2>Let’s make sense<br>of <span class="serif">something.</span></h2><p>I’m open to entry-level data opportunities, meaningful collaborations, and feedback on my work.</p><div class="contact-actions"><a class="button button-light" href="mailto:menaganadar28@gmail.com">Start a conversation <span>↗</span></a><a class="contact-social" href="https://github.com/Menagasweety" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a class="contact-social" href="https://www.linkedin.com/in/menaga-krishnamurthy" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div><div class="contact-decoration" aria-hidden="true">M<span>.</span></div></div></section>
   </main>
-
-  <footer>
-    <div class="divider"></div>
-    <p>© 2026 Menaga Krishnamurthy. All rights reserved.</p>
-  </footer>
-
+  <footer class="site-footer page-wrap"><a class="brand" href="#home"><span class="brand-mark">M<span>.</span></span><span>MENAGA KRISHNAMURTHY</span></a><span>Designed with intention. Built with HTML, CSS &amp; JavaScript.</span><a href="#home">BACK TO TOP ↑</a></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
