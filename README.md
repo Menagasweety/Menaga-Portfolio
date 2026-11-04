@@ -3,4 +3,5 @@
 A responsive data and AI portfolio built with plain HTML, CSS, and JavaScript. It includes live GitHub profile counts, searchable/filterable horizontal project shelves for Python/notebook work and websites/apps, a downloadable `resume.pdf`, live-site links from repository homepage metadata, a saved light/dark theme, responsive navigation, and direct contact links. Deployed links are explicitly mapped for the Temperature Converter, Realtime Chat, and Customer Feedback Analysis projects so each card can link to both the live site and source repository. Customer Feedback Analysis also appears in the notebook shelf when its Jupyter repository is present. The HTML/CSS practice repository and Menaga portfolio repository are intentionally excluded from the project gallery.
 
 
-To know more about me this is my portfolio  :  https://menagasweety.github.io/Menaga-Portfolio/          -visit to know
+To know more about me this is my portfolio  :  https://menagasweety.github.io/Menaga-Portfolio/ 
+(- visit to know)
